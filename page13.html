@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropzy - Forgot Password</title>
+    <link rel="stylesheet" href="stylessn.css" />
+    <link rel="stylesheet" href="styless.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="page3.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="stylesheet" href="page1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body,
+      html {
+        height: 100%;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      header {
+        margin-bottom: 10px;
+      }
+
+      .back-btn img {
+        width: 20px;
+        height: 20px;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      h1 {
+        font-size: 20px;
+        color: #ff6200;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        border: 1px solid #ff6200;
+        border-radius: 8px;
+      }
+
+      .primary-btn {
+        width: 100%;
+        padding: 15px;
+        background-color: #ff6200;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container page13">
+      <header>
+        <a href="page4.html" class="back-btn">
+          <img src="icons/back.png" alt="Back" />
+        </a>
+      </header>
+      <main>
+        <h1>Forgot Password</h1>
+        <p>Enter your email to proceed resetting your password</p>
+        <div class="input-group email-input">
+          <input
+            type="email"
+            id="email"
+            placeholder="    dannycodesltd@gmail.com"
+          />
+        </div>
+      </main>
+      <a href="page14.html">
+        <button class="primary-btn">Continue</button>
+      </a>
+    </div>
+  </body>
+</html>

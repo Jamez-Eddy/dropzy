@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropzy - Enter OTP Code</title>
+    <link rel="stylesheet" href="stylessn.css" />
+    <link rel="stylesheet" href="styless.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="page3.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="stylesheet" href="page1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container page14">
+      <header>
+        <a href="page4.html" class="back-btn">
+          <img src="icons/back.png" alt="Back" />
+        </a>
+      </header>
+      <main>
+        <h1>Enter OTP Code</h1>
+        <p>OTP code has been sent to dannycodeistl@gmail.com</p>
+        <div class="otp-inputs">
+          <input type="text" maxlength="1" value="" />
+          <input type="text" maxlength="1" value="" />
+          <input type="text" maxlength="1" value="" />
+          <input type="text" maxlength="1" value="" />
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <!-- Verify button starts disabled (gray) and turns orange when all OTP fields are filled -->
+        <button class="verify-btn" disabled>Verify</button>
+      </main>
+    </div>
+
+    <script>
+      // Get all OTP input fields and the Verify button
+      const otpInputs = document.querySelectorAll(".otp-inputs input");
+      const verifyBtn = document.querySelector(".verify-btn");
+
+      // Function to check if all OTP fields are filled
+      function checkOtpCompletion() {
+        const allFilled = Array.from(otpInputs).every(
+          (input) => input.value.length === 1
+        );
+        if (allFilled) {
+          verifyBtn.disabled = false;
+          verifyBtn.classList.add("enabled"); // Adds orange background and white text
+        } else {
+          verifyBtn.disabled = true;
+          verifyBtn.classList.remove("enabled"); // Reverts to gray background and text
+        }
+      }
+
+      // Add event listeners to each OTP input
+      otpInputs.forEach((input, index) => {
+        // Check OTP completion on input
+        input.addEventListener("input", (e) => {
+          // Move to the next input if a digit is entered
+          if (e.target.value.length === 1 && index < otpInputs.length - 1) {
+            otpInputs[index + 1].focus();
+          }
+          checkOtpCompletion(); // Check if all fields are filled
+        });
+
+        // Move to the previous input on backspace
+        input.addEventListener("keydown", (e) => {
+          if (
+            e.key === "Backspace" &&
+            e.target.value.length === 0 &&
+            index > 0
+          ) {
+            otpInputs[index - 1].focus();
+          }
+          // Check OTP completion after backspace
+          if (e.key === "Backspace") {
+            setTimeout(checkOtpCompletion, 0); // Delay to ensure value is updated
+          }
+        });
+      });
+
+      // Add click event to the Verify button (for testing purposes)
+      verifyBtn.addEventListener("click", () => {
+        if (!verifyBtn.disabled) {
+          console.log(
+            "OTP Verified:",
+            Array.from(otpInputs)
+              .map((input) => input.value)
+              .join("")
+          );
+          // Example: window.location.href = 'page15.html'; // Link to Reset Password page
+        }
+      });
+    </script>
+  </body>
+</html>

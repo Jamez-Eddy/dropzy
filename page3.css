@@ -1,0 +1,13 @@
+/* page3.css */
+body {
+  background-color: #fff; /* White background */
+  color: #000;
+}
+
+.skip-btn {
+  color: #000;
+}
+
+.dot {
+  background-color: # demistify: #FF6200; /* Orange dots */
+}

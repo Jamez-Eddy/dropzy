@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropzy - Login</title>
+    <link rel="stylesheet" href="styless.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="page3.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="stylesheet" href="page1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      .social-btn img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .back-btn img {
+        width: 24px;
+        height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container page4">
+      <header>
+        <a href="page3.html" class="back-btn">
+          <img src="icons/back.png" alt="Back" />
+        </a>
+      </header>
+      <main>
+        <h1>Let’s get you logged in!</h1>
+        <p>Enter the information below to get on board.</p>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <a href="page13.html" class="forgot-password">Forgot Password?</a>
+        <button class="primary-btn">Login</button>
+        <div class="divider">
+          <span></span>
+          <p>OR</p>
+          <span></span>
+        </div>
+        <button class="social-btn">
+          <img src="icons/google.png" alt="Google Icon" />
+          Continue with Google
+        </button>
+        <button class="social-btn">
+          <img src="icons/apple.png" alt="Apple Icon" />
+          Continue with Apple
+        </button>
+        <p class="signup-link">
+          Not a member yet? <a href="page5.html">Register Now</a>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

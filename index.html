@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropzy - Onboarding 1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="page1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        height: 100%;
+        background-color: #fff;
+      }
+
+      /* Loading screen styles */
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ff6200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      }
+
+      .loading-screen img {
+        width: 150px;
+        margin-bottom: 10px;
+      }
+
+      .loading-screen .loading-text {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .loading-screen.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* Existing styles */
+      .skip-btn,
+      .next-btn {
+        background-color: #ff6200;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .skip-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          document.querySelector(".loading-screen").classList.add("hidden");
+        }, 3000); // 5 seconds
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <img src="icons/logo.png" alt="Dropzy" />
+      <div class="loading-text">Dropzy</div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <header>
+        <div class="logo">Dropzy</div>
+        <a href="page4.html" class="skip-link">
+          Skip
+          <img src="icons/arrow-forward.png" alt="Skip Icon" />
+        </a>
+      </header>
+      <main>
+        <div class="illustration">
+          <img
+            src="icons/delivery-man.png"
+            alt="Delivery Illustration"
+            style="
+              width: 100%;
+              max-width: 300px;
+              height: 300px;
+              background-color: #ccc;
+              margin-bottom: 20px;
+            "
+          />
+        </div>
+        <h1>Best package delivery service just for you.</h1>
+        <p>We are the best delivery service you can find at the moment.</p>
+      </main>
+      <footer>
+        <div class="pagination">
+          <span class="tile active"></span>
+          <span class="tile"></span>
+          <span class="tile"></span>
+        </div>
+        <a href="page2.html" class="next-btn">Next</a>
+      </footer>
+    </div>
+  </body>
+</html>
