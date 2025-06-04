@@ -41,10 +41,9 @@
         margin-bottom: 10px;
       }
 
-      .loading-screen .loading-text {
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
+      .loading-screen img.loading-gif {
+        width: 100px; /* Adjust size as needed */
+        height: auto;
       }
 
       .loading-screen.hidden {
@@ -81,8 +80,12 @@
   <body>
     <!-- Loading Screen -->
     <div class="loading-screen">
-      <img src="/logo.png" alt="Dropzy" />
-      <div class="loading-text"></div>
+      <img src="logo.png" alt="Dropzy" class="logo" />
+      <img
+        src="Animation2.gif"
+        alt="Loading Animation"
+        class="loading-gif"
+      />
     </div>
 
     <!-- Main Page Content -->
@@ -91,15 +94,13 @@
         <div class="logo">Dropzy</div>
         <a href="page4.html" class="skip-link">
           Skip
-          <img src="/arrow-forward.png" alt="Skip Icon" />
+          <img src="icons/arrow-forward.png" alt="Skip Icon" />
         </a>
       </header>
-      <br>
-      <br>
       <main>
         <div class="illustration">
           <img
-            src="/delivery-man.png"
+            src="icons/delivery-man.png"
             alt="Delivery Illustration"
             style="
               width: 100%;
