@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Password</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .container {
+        padding: 24px;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .back {
+        font-size: 24px;
+        color: #ff6600;
+        cursor: pointer;
+      }
+
+      h2 {
+        color: #ff6600;
+        margin-top: 16px;
+      }
+
+      p {
+        color: #aaa;
+      }
+
+      .input-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin: 16px 0;
+        padding: 12px;
+      }
+
+      .input-box input {
+        border: none;
+        background: transparent;
+        outline: none;
+        flex: 1;
+      }
+
+      .save-btn,
+      .home-btn {
+        width: 100%;
+        background-color: #ff6600;
+        color: white;
+        padding: 16px;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 24px;
+      }
+
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+      }
+
+      .modal-content {
+        background-color: white;
+        border-radius: 20px;
+        padding: 32px 24px;
+        text-align: center;
+        max-width: 300px;
+      }
+
+      .modal-content .checkmark {
+        font-size: 48px;
+        color: #ff6600;
+        margin-bottom: 16px;
+      }
+
+      .modal-content h3 {
+        color: #ff6600;
+      }
+
+      .modal.show {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="back">&#8592;</div>
+      <h2>Enter New Password</h2>
+      <p>Please enter new password</p>
+
+      <div class="input-box">
+        <input type="password" placeholder="Enter new password" />
+        <span>&#128065;</span>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Re-enter password" />
+        <span>&#128065;</span>
+      </div>
+      <button class="save-btn" onclick="showSuccessModal()">Save</button>
+    </div>
+
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <div class="checkmark">&#10003;</div>
+        <h3>Password Update Successful</h3>
+        <p>Your password has been updated successfully</p>
+        <button class="home-btn" onclick="goHome()">Back To Home</button>
+      </div>
+    </div>
+
+    <script>
+      function showSuccessModal() {
+        document.getElementById("successModal").classList.add("show");
+      }
+
+      function goHome() {
+        alert("Redirecting to Home...");
+        window.location.href = "page4.html"; // Uncomment for real navigation
+      }
+    </script>
+  </body>
+</html>
