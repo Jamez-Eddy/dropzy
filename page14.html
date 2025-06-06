@@ -19,7 +19,7 @@
     <div class="container page14">
       <header>
         <a href="page4.html" class="back-btn">
-          <img src="back.png" alt="Back" />
+          <img src="icons/back.png" alt="Back" />
         </a>
       </header>
       <main>
@@ -86,12 +86,8 @@
       // Add click event to the Verify button (for testing purposes)
       verifyBtn.addEventListener("click", () => {
         if (!verifyBtn.disabled) {
-          console.log(
-            "OTP Verified:",
-            Array.from(otpInputs)
-              .map((input) => input.value)
-              .join("")
-          );
+          window.location.href = "page15.html";
+
           // Example: window.location.href = 'page15.html'; // Link to Reset Password page
         }
       });
