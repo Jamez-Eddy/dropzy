@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #000;
+      }
+      .container {
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 20px;
+      }
+      .header .back {
+        position: absolute;
+        left: 0;
+        font-size: 1.5rem;
+        color: #f46c06;
+        cursor: pointer;
+      }
+      .header h1 {
+        color: #f46c06;
+        font-size: 1.4rem;
+      }
+      .section-title {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .notification {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 16px;
+      }
+      .icon-circle {
+        background-color: #eafaf5;
+        border-radius: 50%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+      }
+      .icon-circle img {
+        width: 20px;
+        height: 20px;
+      }
+      .message {
+        flex: 1;
+      }
+      .message-title {
+        font-weight: bold;
+        color: #f46c06;
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+      }
+      .message-body {
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="back">←</div>
+        <h1>Notification</h1>
+      </div>
+
+      <div class="section-title">Today</div>
+
+      <div class="notification">
+        <div class="icon-circle">
+          <img
+            src="https://img.icons8.com/ios-filled/50/f46c06/parcel.png"
+            alt="parcel icon"
+          />
+        </div>
+        <div class="message">
+          <div class="message-title">The package is ready to be sent</div>
+          <div class="message-body">
+            Your package has been sent from Abuja, Nigeria to Lagos, Nigeria
+          </div>
+        </div>
+      </div>
+
+      <div class="notification">
+        <div class="icon-circle">
+          <img
+            src="https://img.icons8.com/ios-filled/50/f46c06/parcel.png"
+            alt="parcel icon"
+          />
+        </div>
+        <div class="message">
+          <div class="message-title">The package is ready to be sent</div>
+          <div class="message-body">
+            Your package has been sent from Abuja, Nigeria to Lagos, Nigeria
+          </div>
+        </div>
+      </div>
+
+      <div class="notification">
+        <div class="icon-circle">
+          <img
+            src="https://img.icons8.com/ios-filled/50/f46c06/parcel.png"
+            alt="parcel icon"
+          />
+        </div>
+        <div class="message">
+          <div class="message-title">The package is ready to be sent</div>
+          <div class="message-body">
+            Your package has been sent from Abuja, Nigeria to Lagos, Nigeria
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

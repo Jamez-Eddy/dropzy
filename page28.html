@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+      }
+      .container {
+        padding: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 20px 0;
+        color: #f46c06;
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+      .back {
+        position: absolute;
+        left: 0;
+        font-size: 1.4rem;
+        color: #f46c06;
+        padding-left: 20px;
+      }
+      .avatar-section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      .avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        background-color: #f3f3f3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+      }
+      .edit-btn {
+        position: absolute;
+        bottom: 0;
+        right: calc(50% - 40px);
+        transform: translateX(50%);
+        background-color: #f46c06;
+        color: white;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;
+      }
+      .form-group {
+        margin-bottom: 16px;
+      }
+      .form-control {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #f46c06;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        box-sizing: border-box;
+      }
+      .form-control:focus {
+        outline: none;
+        border-color: #f46c06;
+      }
+      .flag-dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .flag-dropdown span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .save-btn {
+        width: 100%;
+        padding: 16px;
+        border: none;
+        background-color: #f46c06;
+        color: white;
+        font-size: 1rem;
+        border-radius: 12px;
+        margin-top: 30px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="back">←</div>
+        Edit Profile
+      </div>
+
+      <div class="avatar-section">
+        <div class="avatar">👤</div>
+        <div class="edit-btn">✎</div>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Daniel Ogola" />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          type="email"
+          placeholder="dannieogola@gmail.com"
+        />
+      </div>
+      <div class="form-group">
+        <div class="form-control flag-dropdown">
+          <span>🇳🇬 Nigeria</span>
+          <span>⌄</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-control flag-dropdown">
+          <span>Bayelsa State</span>
+          <span>⌄</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-control flag-dropdown">
+          <span>Road 3, Ekeki Housing Estate, Yenagoa</span>
+          <span>⌄</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-control flag-dropdown">
+          <span>+234</span>
+          <span>810-706-5381</span>
+        </div>
+      </div>
+
+      <button class="save-btn">Save</button>
+    </div>
+  </body>
+</html>

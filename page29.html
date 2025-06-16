@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Address</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #000;
+      }
+      .container {
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+      .header .back {
+        position: absolute;
+        left: 0;
+        font-size: 1.4rem;
+        color: #f46c06;
+        cursor: pointer;
+      }
+      .address-section {
+        border-bottom: 1px solid #eee;
+        padding: 20px 0 16px;
+        position: relative;
+      }
+      .address-type {
+        color: #f46c06;
+        font-weight: bold;
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.95rem;
+      }
+      .address-name {
+        font-weight: bold;
+        font-size: 0.95rem;
+        margin: 4px 0;
+      }
+      .address-contact {
+        font-size: 0.9rem;
+        color: #333;
+        line-height: 1.4;
+      }
+      .action-buttons {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        display: flex;
+        gap: 10px;
+      }
+      .icon-button {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .icon-button.delete {
+        background-color: #ff3b30;
+        color: #fff;
+        border: none;
+      }
+      .add-btn {
+        background-color: #f46c06;
+        color: white;
+        padding: 16px;
+        width: 100%;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="back">←</div>
+        My Address
+      </div>
+
+      <div class="address-section">
+        <div class="address-type">
+          <img
+            src="https://img.icons8.com/ios-filled/20/f46c06/home.png"
+            alt="home"
+          />
+          <span>Home</span>
+        </div>
+        <div class="address-name">Daniel Ogola</div>
+        <div class="address-contact">+234 810 706 5381</div>
+        <div class="address-contact">Road 3, Ekeki Housing Estate, Yenagoa</div>
+        <div class="action-buttons">
+          <button class="icon-button">
+            <img src="https://img.icons8.com/ios-filled/14/000000/edit.png" />
+          </button>
+          <button class="icon-button delete">
+            <img src="https://img.icons8.com/ios-filled/14/ffffff/trash.png" />
+          </button>
+        </div>
+      </div>
+
+      <div class="address-section">
+        <div class="address-type">
+          <img
+            src="https://img.icons8.com/ios-filled/20/f46c06/briefcase.png"
+            alt="work"
+          />
+          <span>Work</span>
+        </div>
+        <div class="address-name">Daniel Ogola</div>
+        <div class="address-contact">+234 810 706 5381</div>
+        <div class="address-contact">
+          Greenvilla Junction, Biogbolo, Yenagoa
+        </div>
+        <div class="action-buttons">
+          <button class="icon-button">
+            <img src="https://img.icons8.com/ios-filled/14/000000/edit.png" />
+          </button>
+          <button class="icon-button delete">
+            <img src="https://img.icons8.com/ios-filled/14/ffffff/trash.png" />
+          </button>
+        </div>
+      </div>
+
+      <button class="add-btn"><span>+</span> Add New Address</button>
+    </div>
+  </body>
+</html>

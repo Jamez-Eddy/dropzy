@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Parcel</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #333;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .header h2 {
+        flex-grow: 1;
+        text-align: center;
+        margin: 0;
+        color: #f46c06;
+        font-size: 1.5rem;
+      }
+
+      .back-arrow {
+        font-size: 1.5rem;
+        color: #f46c06;
+        cursor: pointer;
+      }
+
+      .tracking-box,
+      .package-info,
+      .map-container {
+        margin: 5vw;
+        padding: 5vw;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .tracking-id {
+        text-align: right;
+        font-weight: bold;
+        color: #f46c06;
+        margin-bottom: 16px;
+      }
+
+      .timeline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+
+      .timeline .dot {
+        width: 20px;
+        height: 20px;
+        background-color: #f46c06;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .timeline .bar {
+        flex-grow: 1;
+        height: 4px;
+        background-color: #e0e0e0;
+        margin: 0 5px;
+        position: relative;
+      }
+
+      .timeline .bar::before {
+        content: "";
+        position: absolute;
+        height: 4px;
+        background-color: #f46c06;
+        width: 33%; /* represents progress */
+      }
+
+      .location-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        margin-top: 8px;
+      }
+
+      .status-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+      }
+
+      .status {
+        background-color: #f46c06;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+      }
+
+      .view-details {
+        color: #f46c06;
+        font-size: 0.8rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .package-info h3 {
+        font-size: 1rem;
+        color: #f46c06;
+        margin-bottom: 12px;
+      }
+
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+
+      .info-row div {
+        font-size: 0.9rem;
+        color: #333;
+      }
+
+      .label {
+        font-weight: bold;
+        color: #f46c06;
+      }
+
+      .map-container {
+        height: 300px;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      @media screen and (min-width: 768px) {
+        .tracking-box,
+        .package-info,
+        .map-container {
+          margin: 20px auto;
+          padding: 24px;
+          max-width: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="back-arrow">&#8592;</div>
+      <h2>Track Parcel</h2>
+    </div>
+
+    <div class="tracking-box">
+      <div class="tracking-id">
+        Tracking ID:
+        <span style="color: #f46c06; font-weight: bold">UVKE293MS020</span>
+      </div>
+
+      <div class="timeline">
+        <div class="dot">📦</div>
+        <div class="bar"></div>
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot"></div>
+      </div>
+
+      <div class="location-details">
+        <div>
+          <strong>July 22, 2024</strong><br />
+          34, Okaka Road
+        </div>
+        <div style="text-align: right">
+          <strong>July 24, 2024</strong><br />
+          13, Green Villa Road
+        </div>
+      </div>
+
+      <div class="status-bar">
+        <div class="status">Waiting To Be Picked Up</div>
+        <div class="view-details">View Details</div>
+      </div>
+    </div>
+
+    <div class="package-info">
+      <h3>Package Information</h3>
+      <div class="info-row">
+        <div class="label">Delivery Type</div>
+        <div class="label">Package Weight</div>
+      </div>
+      <div class="info-row">
+        <div>Express Delivery</div>
+        <div>4 Kg</div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.745073410169!2d7.491302175048763!3d9.07345748899042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0ba5ce2b8cc3%3A0x3cdd4dcbb457fda!2sGTBank%20-%20Chevron%20Branch!5e0!3m2!1sen!2sng!4v1718524780000!5m2!1sen!2sng"
+      ></iframe>
+    </div>
+  </body>
+</html>

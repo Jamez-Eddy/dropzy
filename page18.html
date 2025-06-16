@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery Map View</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 375px;
+        margin: 0 auto;
+        background-color: #fff;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .back-button {
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      #map {
+        width: 100%;
+        height: calc(100vh - 64px);
+      }
+
+      .details-card {
+        position: absolute;
+        bottom: 20px;
+        left: 16px;
+        right: 16px;
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        z-index: 1000;
+      }
+
+      .details-card .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .details-card .profile img {
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+        object-fit: cover;
+        margin-right: 12px;
+      }
+
+      .details-card .profile-name {
+        font-weight: bold;
+        color: #f97316;
+      }
+
+      .details-card .item {
+        font-weight: bold;
+        color: #ef4444;
+        font-size: 14px;
+      }
+
+      .details-card .recipient {
+        font-size: 13px;
+        color: #374151;
+      }
+
+      .details-card .recipient span {
+        color: #3b82f6;
+      }
+
+      .btn {
+        width: 100%;
+        margin-top: 16px;
+        padding: 14px;
+        background-color: #f97316;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      function initMap() {
+        const location = { lat: 4.9248535, lng: 6.2225443 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 13,
+          center: location,
+        });
+
+        new google.maps.Marker({
+          position: location,
+          map: map,
+          title: "Delivery Location",
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="back-button">←</div>
+      </div>
+
+      <div id="map"></div>
+
+      <div class="details-card">
+        <div class="profile">
+          <img src="icons/profile-placeholder.jpg" alt="Daniel Ogola" />
+          <div>
+            <div class="profile-name">Daniel Ogola</div>
+            <div class="recipient">Road 3, Ekeki Estate, Yenagoa, Bayelsa</div>
+          </div>
+        </div>
+
+        <div class="item">Electronics/Gadgets</div>
+        <div class="recipient">
+          Recipient: Esther Jasper <span>+234 903233232</span>
+        </div>
+
+        <a href="page19.html">
+          <button class="btn">Start Delivery</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Replace 'YOUR_API_KEY' with your actual Google Maps JavaScript API key -->
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=REPLACE_WITH_YOUR_VALID_API_KEY&callback=initMap"
+    ></script>
+  </body>
+</html>

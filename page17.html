@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 16px;
+        background-color: #fff;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
+
+      .header {
+        text-align: right;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 12px 0;
+      }
+
+      .profile {
+        display: flex;
+        align-items: center;
+      }
+
+      .profile img {
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 12px;
+      }
+
+      .profile-info {
+        flex-grow: 1;
+      }
+
+      .profile-name {
+        color: #f97316;
+        font-weight: bold;
+      }
+
+      .stars {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #6b7280;
+      }
+
+      .star {
+        color: #facc15;
+        margin-right: 1px;
+      }
+
+      .bike-icon img {
+        width: 84px;
+        height: 84px;
+      }
+
+      .steps {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .step {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .location-icon {
+        width: 14px;
+        height: 14px;
+        background: url("https://img.icons8.com/ios-filled/50/fa8c16/marker.png")
+          no-repeat center center;
+        background-size: contain;
+        margin-right: 8px;
+      }
+
+      .circle {
+        width: 10px;
+        height: 10px;
+        background-color: #10b981;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+
+      .trail {
+        position: absolute;
+        left: 6px;
+        top: 14px;
+        width: 2px;
+        height: 32px;
+        background-color: #10b981;
+      }
+
+      .info {
+        font-size: 14px;
+        margin-top: 20px;
+      }
+
+      .info-section {
+        margin-bottom: 12px;
+      }
+
+      .label {
+        color: #6b7280;
+        font-size: 12px;
+      }
+
+      .value {
+        color: #f97316;
+        font-weight: bold;
+      }
+
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .pickup-images {
+        display: flex;
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      .pickup-image {
+        width: 64px;
+        height: 64px;
+        background-color: #d1d5db;
+        border-radius: 8px;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 16px;
+        background-color: #f97316;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title">Delivery Details</div>
+
+      <div class="profile">
+        <img src="icons/profile-placeholder.jpg" alt="Profile" />
+        <div class="profile-info">
+          <div class="profile-name">Daniel Ogola</div>
+          <div style="color: #6b7280; font-size: 13px">20 Deliveries</div>
+          <div class="stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star" style="color: #d1d5db">★</span>
+            <span style="margin-left: 4px">4.1</span>
+          </div>
+        </div>
+        <div class="bike-icon">
+          <img src="icons/bike-icon.png" alt="Bike" />
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="location-icon"></div>
+          <div class="label">Pickup Location</div>
+        </div>
+        <div class="trail"></div>
+        <div class="step">
+          <div class="circle"></div>
+          <div class="label">Delivery Location</div>
+        </div>
+        <div class="trail" style="top: 58px"></div>
+        <div class="step">
+          <div class="circle"></div>
+          <div class="label">Complete</div>
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="info-section">
+          <div class="label">Pickup Location</div>
+          <div class="value">32 Onopa Rd, Onopa</div>
+        </div>
+        <div class="info-section">
+          <div class="label">Delivery Location</div>
+          <div class="value">21b, Inec, Amarata</div>
+        </div>
+        <div class="info-row">
+          <div>
+            <div class="label">What you are sending</div>
+            <div class="value">Electronics/Gadgets</div>
+          </div>
+          <div>
+            <div class="label">Recipient</div>
+            <div class="value">Diepreye Peremobowie</div>
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="label">Recipient contact number</div>
+          <div class="value">08123456789</div>
+        </div>
+        <div class="info-row">
+          <div>
+            <div class="label">Payment</div>
+            <div class="value">Card</div>
+          </div>
+          <div>
+            <div class="label">Fee:</div>
+            <div class="value">₦ 20,431.92 NGN</div>
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="label">Pickup image(s)</div>
+          <div class="pickup-images">
+            <div class="pickup-image"></div>
+            <div class="pickup-image"></div>
+          </div>
+        </div>
+      </div>
+
+      <br /><br /><br />
+      <a href="page18.html" ">
+      <button class="btn">View Map Route & Start Delivery</button>
+      </a>
+    </div>
+  </body>
+</html>

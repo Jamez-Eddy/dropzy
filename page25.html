@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order History</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+      }
+
+      .header {
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .tab {
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 1px solid #f46c06;
+        color: #f46c06;
+        cursor: pointer;
+      }
+
+      .tab.active {
+        background-color: #f46c06;
+        color: white;
+      }
+
+      .order-card {
+        background-color: #fff;
+        margin: 16px;
+        border-radius: 12px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+        padding: 20px;
+      }
+
+      .tracking-id {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        color: #f46c06;
+        flex-wrap: wrap;
+      }
+
+      .timeline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0 10px;
+        flex-wrap: nowrap;
+      }
+
+      .timeline .dot {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #00b14f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+      }
+
+      .timeline .dot.check {
+        width: 30px;
+        height: 30px;
+        background-color: #00b14f;
+        font-size: 16px;
+      }
+
+      .timeline .bar {
+        flex-grow: 1;
+        height: 4px;
+        background-color: #00b14f;
+        margin: 0 5px;
+        position: relative;
+        min-width: 20px;
+      }
+
+      .location-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        margin-top: 5px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .location-details strong {
+        color: #f46c06;
+      }
+
+      .status-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .status {
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        color: white;
+        background-color: #f46c06;
+      }
+
+      .view-details {
+        color: #f46c06;
+        font-size: 0.8rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .navbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        border-top: 1px solid #ddd;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        flex-wrap: nowrap;
+      }
+
+      .navbar i,
+      .navbar svg {
+        font-size: 20px;
+        color: #f46c06;
+      }
+
+      .navbar .plus-btn {
+        background-color: #f46c06;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        position: relative;
+        top: -20px;
+      }
+
+      @media screen and (max-width: 480px) {
+        .tracking-id,
+        .status-bar,
+        .location-details {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .timeline {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">Order History</div>
+    <div class="tabs">
+      <a href="page24.html">
+        <div class="tab">Pending</div>
+      </a>
+      <div class="tab active">Completed</div>
+    </div>
+
+    <!-- Completed Order 1 -->
+    <div class="order-card">
+      <div class="tracking-id">
+        <span>Tracking ID:</span>
+        <span>UVKE293MS020</span>
+      </div>
+      <div class="timeline">
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot check">✔</div>
+      </div>
+      <div class="location-details">
+        <div>
+          <strong>July 22, 2024</strong><br />
+          Lagos, Nigeria
+        </div>
+        <div style="text-align: right">
+          <strong>July 24, 2024</strong><br />
+          Abuja, Nigeria
+        </div>
+      </div>
+      <div class="status-bar">
+        <div class="status">Delivered</div>
+        <div class="view-details">View Details</div>
+      </div>
+    </div>
+
+    <!-- Repeat 2 more times -->
+    <div class="order-card">
+      <div class="tracking-id">
+        <span>Tracking ID:</span>
+        <span>UVKE293MS020</span>
+      </div>
+      <div class="timeline">
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot check">✔</div>
+      </div>
+      <div class="location-details">
+        <div>
+          <strong>July 22, 2024</strong><br />
+          Lagos, Nigeria
+        </div>
+        <div style="text-align: right">
+          <strong>July 24, 2024</strong><br />
+          Abuja, Nigeria
+        </div>
+      </div>
+      <div class="status-bar">
+        <div class="status">Delivered</div>
+        <div class="view-details">View Details</div>
+      </div>
+    </div>
+
+    <div class="order-card">
+      <div class="tracking-id">
+        <span>Tracking ID:</span>
+        <span>UVKE293MS020</span>
+      </div>
+      <div class="timeline">
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot"></div>
+        <div class="bar"></div>
+        <div class="dot check">✔</div>
+      </div>
+      <div class="location-details">
+        <div>
+          <strong>July 22, 2024</strong><br />
+          Lagos, Nigeria
+        </div>
+        <div style="text-align: right">
+          <strong>July 24, 2024</strong><br />
+          Abuja, Nigeria
+        </div>
+      </div>
+      <div class="status-bar">
+        <div class="status">Delivered</div>
+        <div class="view-details">View Details</div>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="navbar">
+      <i>🏠</i>
+      <i>📦</i>
+      <div class="plus-btn">+</div>
+      <i>📊</i>
+      <i>👤</i>
+    </div>
+  </body>
+</html>

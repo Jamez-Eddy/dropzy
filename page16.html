@@ -1,0 +1,88 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="newpage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <div class="status-icons">
+          <!--  <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-three-quarters"></i>-->
+        </div>
+      </div>
+      <div class="location-section">
+        <i class="fas fa-map-marker-alt location-icon"></i>
+        <div class="location-text">
+          <span>Your Location</span><br />
+          <strong class="location">Bayelsa, Nigeria</strong>
+        </div>
+        <br />
+        <i class="fas fa-user-circle profile-icon"></i>
+      </div>
+      <div class="toggle-wrapper">
+        <span class="toggle-label">Active Status</span>
+        <label class="switch">
+          <input type="checkbox" checked />
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="section-header">
+        <span>Available Deliveries</span>
+        <a href="#" class="view-all">View all</a>
+      </div>
+      <div class="card delivery-card">
+        <div class="delivery-info">
+          <p class="category">Electronics/Gadgets</p>
+          <p class="recipient">Recipient: Paul Pogba</p>
+          <p class="drop-off">
+            <i class="fas fa-biking"></i>
+            <i class="fas fa-map-pin"></i> Ekeki bustop, Ekeki
+          </p>
+        </div>
+        <a class="btn" href="page17.html">View Details</a>
+      </div>
+
+      <div class="section-header">Recent Delivery</div>
+      <div class="card recent-card">
+        <div class="product-name">
+          <img src="macbook-icon.png" alt="Macbook" class="product-icon" />
+          <strong>Macbook pro 13 inch(Gray)</strong>
+        </div>
+        <div class="tracking-id">Tracking ID: UO82MSMCMCE</div>
+        <div class="address-track">
+          <div class="dot-line">
+            <span class="dot filled"></span>
+            <div class="line"></div>
+            <span class="dot"></span>
+          </div>
+          <div class="address-info">
+            <p>
+              <strong>From</strong><br />54, Azikoro Estate, Yenagoa,
+              Bayelsa-Nigeria
+            </p>
+            <p>
+              <strong>To</strong><br />39, Opolo Road, Yenagoa , Bayelsa-Nigeria
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--  <div class="bottom-nav">
+        <i class="fas fa-home nav-icon active"></i>
+        <i class="fas fa-box nav-icon"></i>
+        <i class="fas fa-user nav-icon"></i>
+      </div>-->
+    </div>
+  </body>
+</html>

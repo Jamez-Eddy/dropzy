@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: #fff;
+        color: #333;
+      }
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .header h2 {
+        color: #f97316;
+        font-size: 20px;
+        margin: 0;
+      }
+      .back-arrow {
+        position: absolute;
+        left: 0;
+        font-size: 20px;
+        color: #f97316;
+        cursor: pointer;
+      }
+      .section-title {
+        color: #f97316;
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .order-entry {
+        margin-bottom: 20px;
+      }
+      .order-entry h4 {
+        margin: 0 0 5px;
+        font-weight: 400;
+      }
+      .order-entry strong {
+        display: block;
+        font-weight: 700;
+      }
+      .order-entry span {
+        display: block;
+        font-size: 14px;
+        color: #555;
+      }
+      .payment-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+      }
+      .payment-option img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+      .payment-option label {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+      }
+      .summary {
+        padding: 20px 0 0;
+        border-top: 1px solid #eee;
+      }
+      .summary-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      .summary-total {
+        font-weight: 700;
+        color: #f97316;
+        font-size: 18px;
+      }
+      button {
+        width: 100%;
+        padding: 14px;
+        background: #f97316;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="back-arrow">&#8592;</div>
+        <h2>Checkout</h2>
+      </div>
+
+      <div class="section-title">Your Order</div>
+      <div class="order-entry">
+        <h4>Uwak Daniel</h4>
+        <strong>54, Unity Avenue, Ijagemo-Ijegun, Lagos-Nigeria</strong>
+        <span>+234 802 827 6612</span>
+      </div>
+      <div class="order-entry">
+        <h4>Babajide Korede</h4>
+        <strong
+          >74b, Kenneth Williams Street, Ago Palace Way, Okota,
+          Lagos-Nigeria</strong
+        >
+        <span>+234 912 302 4820</span>
+      </div>
+
+      <div class="payment-option">
+        <label
+          ><img
+            src="https://img.icons8.com/ios-filled/50/000000/money.png"
+            alt="cash"
+          />Cash</label
+        >
+        <input type="radio" name="payment" />
+      </div>
+      <div class="payment-option">
+        <label
+          ><img
+            src="https://img.icons8.com/ios-filled/50/000000/bank-card-back-side.png"
+            alt="transfer"
+          />Transfer</label
+        >
+        <input type="radio" name="payment" checked />
+      </div>
+
+      <div class="summary">
+        <div class="summary-item">
+          <span>Shipping Fee</span>
+          <span>3,500 NGN</span>
+        </div>
+        <div class="summary-item">
+          <span>Discount</span>
+          <span>350 NGN</span>
+        </div>
+        <div class="summary-item">
+          <strong>Total</strong>
+          <strong class="summary-total">3,150 NGN</strong>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <a href="page22.html">
+        <button>Pay Now</button>
+      </a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parcel Booking Success</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: url("https://via.placeholder.com/800x600") center/cover
+          no-repeat; /* Replace with actual background if needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 400px;
+        z-index: 10;
+      }
+
+      .check-icon {
+        background-color: #2ecc71;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px auto;
+      }
+
+      .check-icon svg {
+        width: 40px;
+        height: 40px;
+        fill: white;
+      }
+
+      h2 {
+        color: #e67e22;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
+      .track-btn {
+        background-color: #f46c06;
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .track-btn:hover {
+        background-color: #e55b00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal-container">
+      <div class="modal">
+        <div class="check-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M20.285 6.709a1 1 0 00-1.41-1.418L9 15.17l-3.876-3.877a1 1 0 10-1.414 1.415l4.586 4.586a1 1 0 001.414 0l10.575-10.585z"
+            />
+          </svg>
+        </div>
+        <h2>Your Parcel has been booked successfully!</h2>
+        <p>
+          You can track your shipment with tracking id:
+          <strong>#203209302</strong>
+        </p>
+        <a href="page23.html">
+          <button class="track-btn">Track Parcel</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
